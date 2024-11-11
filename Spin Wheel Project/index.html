@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Spin Wheel Project</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="Spinbuttom">Spin</div>
+        <div class="Wheel">
+            <div class="number" style="--i:1;--clr:red;"><span>800</span></div>
+            <div class="number" style="--i:2;--clr:blue;"><span>8</span></div>
+            <div class="number" style="--i:3;--clr:yellow;"><span>80</span></div>
+            <div class="number" style="--i:4;--clr:orange;"><span>0</span></div>
+            <div class="number" style="--i:5;--clr:pink;"><span>8000</span></div>
+            <div class="number" style="--i:6;--clr:brown;"><span>10</span></div>
+            <div class="number" style="--i:7;--clr:green;"><span>5</span></div>
+            <div class="number" style="--i:8;--clr:skyblue;"><span>500</span></div>
+        </div>
+    </div>
+
+    <script>
+        let Wheel = document.querySelector('.Wheel');
+        let Spinbuttom = document.querySelector('.Spinbuttom');
+        let value = Math.ceil(Math.random() * 3600);
+
+        Spinbuttom.onclick = function(){
+            Wheel.style.transform = "rotate(" + value +"deg)";
+            value += Math.ceil(Math.random() * 3600);
+        }
+    </script>
+</body>
+</html>
